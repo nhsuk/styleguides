@@ -564,23 +564,23 @@
     hash = {"one" => 1, "two" => 2, "three" => 3}
 
     # good
-    hash = {one: 1, two: 2, three: 3}
+    hash = {:one => 1, :two => 2, :three => 3}
     ```
 
-- Use Ruby 1.9 syntax for symbolic hash keys. This includes method calls.
+- Use fat arrows (a.k.a hashrocket) syntax for symbolic hash keys. This includes method calls.
 
     ```ruby
     # bad
-    hash = {:one => 1, :two => 2}
-
-    # good
     hash = {one: 1, two: 2}
 
+    # good
+    hash = {:one => 1, :two => 2}
+
     # bad
-    some_method :one => 1, :two => 2
+    some_method one: 1, two: 2
 
     # good
-    some_method one: 1, two: 2
+    some_method :one => 1, :two => 2
     ```
 
 ## Strings
