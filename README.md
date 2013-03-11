@@ -5,6 +5,8 @@ GDS Style guides
 
 [Hex and RGB values][colours] for all the standard colours used on GOV.UK
 
+## [Cookie naming][cookies]
+
 ## [CSS][css]
 
 ## [Git][git]
@@ -27,6 +29,7 @@ We also have [guidelines for packaging gems][gem].
 [Typographic styles][type] used on GOV.UK
 
 [colours]: http://alphagov.github.com/design/gov.uk.colours
+[cookies]: cookies.md
 [css]: css.md
 [gem]: https://github.com/alphagov/wiki/wiki/Gem-guidelines
 [git]: git.md
