@@ -245,6 +245,26 @@
       # things
     end
 
+-   Use braces for blocks that return values, and `do...end` for blocks that are
+    executed for their side effects.
+
+    ```ruby
+    # block used only for side effect
+    list.each do |item| 
+      puts item 
+    end
+
+    # Block used to return test value
+    list.find { |item| 
+      item > 10 
+    }
+
+    # Block value used to build new value
+    list.collect { |item| 
+      "-r" + item  
+    }
+    ```
+
 -   Never chain `do...end`.
 
     ```ruby
