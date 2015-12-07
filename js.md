@@ -133,22 +133,22 @@ code before. This can cause people to misunderstand what a line is doing.
 ## Modules
 
 Modules should be wrapped in a closure and attach themselves to the global
-`GOVUK` object.
+`NHSUK` object.
 
 ```
 (function() {
   "use strict";
-  window.GOVUK = window.GOVUK || {};
+  window.NHSUK = window.NHSUK || {};
   var $ = window.jQuery;
 
   ...
 
-  GOVUK.myModule = ...
+  NHSUK.myModule = ...
 }());
 ```
 
-**Why:** attaching to the `GOVUK` object keeps us from polluting the global
-namespace. Checking for or creating the `GOVUK` object means the module can
+**Why:** attaching to the `NHSUK` object keeps us from polluting the global
+namespace. Checking for or creating the `NHSUK` object means the module can
 be reused on any project (internal or external) without having to modify it.
 You get the benefits of [strict mode](#strict-mode) which include stopping your
 module from leaking variables into the global scope.
@@ -179,13 +179,13 @@ MyModule.prototype.submitThing = function(){ .. }
 MyModule.prototype.getArgumentsForThing = function(){ .. }
 
 // Good
-GOVUK.myModule = {
+NHSUK.myModule = {
   showThing: function(){ .. },
   hideThing: function(){ .. },
   submitThing: function(){ .. },
   getArgumentsForThing: function(){ .. },
   init: function($element){
-    $element.click(GOVUK.myModule.submitThing);
+    $element.click(NHSUK.myModule.submitThing);
   }
 }
 ```

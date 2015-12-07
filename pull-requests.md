@@ -1,13 +1,10 @@
 # Pull requests
 
-This is a pull requests style guide for working on GOV.UK.
+This is a pull requests style guide for working on alpha.NHS.UK
 
-## Why do we do pull requests on GOV.UK?
+## Why do we use pull requests?
 
 - It's good practice to have a second opinion
-- It's part of our accreditation - the extra pair of (unconnected - even if you
-  pair you need a third person to merge) eyes provides a lightweight change
-  management process, and shares responsiblity for the code going live
 - It's good to spread knowledge and socialise changes amongst others
 - It's good to notify people (via email, GitHub notifications etc.) who might
   otherwise not be involved (we can even 'mention' specific people with `@name`
@@ -58,15 +55,10 @@ code merged - here are some guidelines to help with that process:
   reviewer and any watchers)
 - If the changes are difficult or hard to test, please include a summary of your
   testing methodology and confidence level in the request - this will aid
-  reviewers and prevent them from doing the same work over (this particularly
-  applies to Infrastructure changes, but equally to database optimisations,
-  multi-app API changes etc.)
+  reviewers and prevent them from doing the same work over
 - If you're changing documentation, always use a spell checker before pushing.
   We don't always expect comments in code to be free of errors, but we hold
   documentation to the same standard as anything else we publish
-- If there are several PRs that you would like to be reviewed and merged together
-  (eg frontend and backend changes, or endpoint and adapter changes), cross-link
-  the PRs by referencing the other PR in a comment or the PR description
 - Use separate commits for formatting, refactoring, etc - change the
   functionality, commit, then refactor
 
@@ -87,7 +79,6 @@ individual is happy with the summary first.
   discuss offline" would be enough
 - Try running the code - even if the tests pass it might have bugs
 - Consider security when reviewing code, particularly where there is user input.
-  The [basic security guidance](basic-security.md) might help.
 - Definition of 'done' - if the PR adds value on its own but doesn't entirely
   address the need/ticket merge and deploy it anyway. Any improvement is a good
   improvement, and it keeps the code moving
@@ -139,27 +130,35 @@ fashion.
 
 ### Reviewing external pull requests
 
-We sometimes receive pull requests from members of the public, and while we should be polite to our colleagues of course, it’s even more important that we follow a few guidelines when dealing with people we don’t know, some of whom will be doing this work in their own time.
+We sometimes receive pull requests from members of the public, and while we
+should be polite to our colleagues of course, it’s even more important that we
+follow a few guidelines when dealing with people we don’t know, some of whom
+will be doing this work in their own time.
 
 #### Tone
 
-- Be positive – thank them for contributing. Make this the first thing you say. Thank them even if you are going to immediately reject it
-- When reviewing, make sure you make positive comments as well as suggestions for improvement – a list of just things to fix could be dispiriting
-- Make requests for improvement rather than telling them what to do (“We think it might be better the other way round, what do you think?” rather than “Swap the order of the logic”)
-- Avoid using terms that could be seen as referring to personal traits. (“dumb”, “stupid”) Assume everyone is attractive, intelligent, and well-meaning. Assume good faith
+- Be positive – thank them for contributing. Make this the first thing you say.
+  Thank them even if you are going to immediately reject it
+- When reviewing, make sure you make positive comments as well as suggestions
+  for improvement – a list of just things to fix could be dispiriting
+- Make requests for improvement rather than telling them what to do (“We think
+  it might be better the other way round, what do you think?” rather than “Swap
+  the order of the logic”)
+- Avoid using terms that could be seen as referring to personal traits.
+  (“dumb”, “stupid”) Assume everyone is attractive, intelligent, and
+  well-meaning. Assume good faith
 - Be explicit. Remember people don’t always understand your intentions online
 
 #### Handling the PR
 
-- Communicate clearly about whether we’re interested in the feature or not. If it doesn’t fit with our rationale for the codebase or we don’t want to merge it for another reason, thank them and close
-- If it fits but isn’t mergable due to quality or style issues, then clearly state that we are interested in the feature, but there are barriers to the contribution being merged in its current form
-- It’s worth saying what improvements we’d like to see, but not putting the onus on the contributor to make them all. For example, we might add tests ourselves or work with them to add tests
-- It’s okay to close PRs due to lack of activity; but in this case, invite people to reopen if they pick things up again
-
-#### Practical
-
-- For [vCloud Tools](http://gds-operations.github.io/vcloud-tools/) PRs, make sure someone has acknowledged the PR within two working days, even if this is just a “Thank you, we will review this soon”
-- DO NOT comment on PRs, even to acknowledge them, at the weekend - we do not want to set an expectation that this project is supported outside working hours
-- Try and comment on the changed files rather than by commit as the notifications are easier to follow
-- If the contributor has not written a line in the CHANGELOG, then once their PR is merged, write a line to describe it.
-- Whether they have written the CHANGELOG entry or you do, please add a “Thank you @githubusername”. We don’t usually add CHANGELOG notes for documentation, but if that comes from an external source, add a documentation credit at the end to thank them.
+- Communicate clearly about whether we’re interested in the feature or not. If
+  it doesn’t fit with our rationale for the codebase or we don’t want to merge
+  it for another reason, thank them and close
+- If it fits but isn’t mergable due to quality or style issues, then clearly
+  state that we are interested in the feature, but there are barriers to the
+  contribution being merged in its current form
+- It’s worth saying what improvements we’d like to see, but not putting the
+  onus on the contributor to make them all. For example, we might add tests
+  ourselves or work with them to add tests
+- It’s okay to close PRs due to lack of activity; but in this case, invite
+  people to reopen if they pick things up again
