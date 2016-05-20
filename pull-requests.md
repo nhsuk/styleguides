@@ -162,3 +162,23 @@ will be doing this work in their own time.
   ourselves or work with them to add tests
 - It’s okay to close PRs due to lack of activity; but in this case, invite
   people to reopen if they pick things up again
+
+
+## Pull requests for 'shared' repositories
+
+An individual product/application will often have a defined team of people
+working on the code base. Within the team, an understanding of how a change is
+merged will be known, the people who do the merge, how requests are assigned or
+reviewed amongst the team, etc. A shared repo (such as this one) often has a
+more ethereal team (a virtual team in some circles) and members of the team
+might not be as available as one where there is defined work to be done.
+
+This leads to the question of how to manage merging changes into a shared repo.
+The way we do this is to get somebody from outside of the immediate team (as a
+minimum) to review the PR. That might mean several people from across
+a number of teams or one person from another team - it depends on what the
+change is. The most important thing is to have the change agreed and merged
+by somebody you do not work with on a daily basis.
+
+The reason for this is to ensure at least two people with different daily
+experiences have reviewed and agreed the change is positive.
